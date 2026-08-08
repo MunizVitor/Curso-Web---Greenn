@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar Conta</title>
+    <style>
+        body{
+            margin-top: 20px;
+            background-color: white;
+            font-family: Arial, sans-serif;
+        }
+        img{
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+        }
+        #form{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 320px;
+        }
+
+        #quadrado{
+            background-color: rgb(0, 112, 74);
+            box-shadow: 3px 2px 0px rgba(0, 0, 0, 0.267);
+            height: 330px;
+            margin-top: 20px;
+            width: 300px;
+            border: 1px solid black;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        #formulario label {
+            color: rgb(253, 253, 253);
+            text-align: left;
+            font-size: 15px;
+            margin-top: 10px;
+            margin-bottom: 5px;
+            width: 290px;
+        }
+
+        #formulario input {
+            width: 290px;
+            padding: 5px;
+            height: 20px;
+            border-radius: 8px;
+            background-color: rgb(240, 238, 238);
+            border: 1px solid rgba(0, 0, 0, 0.384);
+            margin-bottom: 15px;
+            margin-top: 5px;
+        }
+
+        #formulario button {
+            width: 100%;          /* ocupa toda a largura do quadrado */
+            margin-top: 15px;
+            padding: 12px;        /* aumenta a altura interna */
+            border-radius: 8px;
+            background-color: white;
+            color: black;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;      /* deixa o texto mais legível */
+            font-weight: bold;    /* dá destaque ao texto */
+        }
+
+
+        .footer {
+        background-color: rgb(0, 112, 74);
+        text-align: center;
+        padding: 10px;
+        color: white;
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        }
+    </style>
+</head>
+<body>
+    <header style="height: 200px; padding: 20px; margin-bottom: 70px;">
+        <div style="text-align: center;">
+            <img src="./img/person_icone.jpg" alt="Foto de perfil">
+            <h2>Criar Conta</h2>
+            <p style="font-weight: bold;">Faça login para acessar sua conta ou crie um novo cadastro.</p>
+        </div>
+    </header>
+    <main>
+        <div id="form" action="entrar.html" method="post" style="margin-bottom: 5px;">
+            <div id="quadrado">
+                <form id="formulario">
+                    <label for="nome">Nome Completo:</label>
+                    <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Digite seu email" required>
+
+                    <label for="senha">Senha:</label>
+                    <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
+
+                    <label for="confirmar_senha">Confirmar Senha:</label>
+                    <input type="password" id="confirmar_senha" name="confirmar_senha" placeholder="Confirme sua senha" required>
+
+                    <button onclick="location.href='entrar.html';" type="submit">Cadastrar</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer">
+            <p>© Vitor Muniz</p>
+        </div>
+    </footer>
+</body>
+</html>
