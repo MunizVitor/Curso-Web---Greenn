@@ -1,0 +1,132 @@
+body{
+    background-color: #d6d6d5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* fonte mais moderna */
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar {
+    background-color: rgb(0, 112, 74); 
+    color: #3fa773; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 50px;        
+    width: 100%;         
+    display: flex;
+    align-items: center;
+    gap: 30px;           
+    padding-left: 20px; 
+    font-weight: bold;
+}
+
+.sidebar p {
+    margin: 0;
+    cursor: pointer;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+
+.sidebar p:hover {
+    color: #b3d3c0;
+    text-shadow: 0 0 8px #0a5729;
+}
+
+
+.apresentacao {
+    display: flex;              /* coloca imagem e texto lado a lado */
+    justify-content: center;    /* centraliza horizontalmente */
+    align-items: flex-start;    /* alinha pelo topo */
+    gap: 50px;                  /* espaço entre imagem e texto */
+    margin-top: 100px;          /* espaço abaixo da barra fixa */
+}
+
+.sobre-curto {
+    text-align: left;           /* texto alinhado à esquerda */
+    max-width: 500px;           /* largura máxima do bloco */
+    margin-top: 20px;
+}
+
+.sobre-curto h2 {
+    font-size: 40px;
+    color: rgb(0, 112, 74);
+    margin-bottom: 15px;
+}
+
+.sobre-curto p {
+    font-size: 18px;
+    line-height: 1.6;           /* espaçamento entre linhas */
+    color: #333;
+    border-left: 3px solid rgb(0, 112, 74); /* destaque discreto */
+    padding-left: 15px;         /* espaço entre borda e texto */
+}
+
+#perfil-img {
+    margin-top: 20px;
+    height: 390px;
+    width: 379px;
+    border-radius: 50%;
+}
+
+.main{
+    margin-top: 50px;
+    width: 100%;       /* largura */
+    height: auto;      /* altura */
+    background-color: rgb(0, 112, 74); /* cor de fundo */
+}
+
+/* SOBRE MIM - 1 */
+
+#sobre1 {
+    margin-left: 50px;
+    margin-right: 50px;
+    gap: 5px;
+    color: white;
+    display: flex;
+}
+
+#sobre1-img {
+    display: flex;
+    gap: 5px;
+    padding-left: 15px;
+}
+
+#sobre1 p{
+    border-right: 3px solid white;
+    padding-right: 15px;
+    text-align: justify;
+}
+
+.foto-sobre1{
+    width: 100px;
+    height: auto;
+    margin: 10px;
+}
+
+/* SOBRE MIM - 2 */
+
+#sobre2 {
+    margin-left: 50px;
+    margin-right: 50px;
+    gap: 5px;
+    color: white;
+    display: flex;
+}
+
+#sobre2-img {
+    display: flex;
+    gap: 5px;
+    padding-left: 15px;
+}
+
+#sobre2 p{
+    border-right: 3px solid white;
+    padding-right: 15px;
+    text-align: justify;
+}
+
+.foto-sobre2{
+    width: 100px;
+    height: auto;
+    margin: 10px;
+}
