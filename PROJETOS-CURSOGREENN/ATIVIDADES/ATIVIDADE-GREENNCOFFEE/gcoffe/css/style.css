@@ -1,0 +1,728 @@
+body {
+    font-family: 'Merriweather', serif;
+    margin: 0; /* remove espaço padrão do body */
+    padding: 0;
+}
+
+/* MENU */
+.sidebar-menu {
+    background-color: #1f1f1f;
+    display: flex;
+    justify-content: space-between; /* logo à esquerda, menu à direita */
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    margin: 0; /* garante que não sobra espaço */
+    padding: 0 20px; /* só um respiro interno */
+    position: fixed; /* fica fixo no topo */
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.sidebar-menu img {
+    width: 100px;
+    padding: 5px;
+}
+
+.sidebar-menu ul {
+    display: flex;
+    gap: 15px;
+    padding: 50px;
+    margin: 0;
+}
+
+.sidebar-menu ul li {
+    list-style: none;
+}
+
+.sidebar-menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Merriweather', serif;
+    font-size: 16px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    padding: 6px 12px;
+    border-radius: 4px;
+}
+
+.sidebar-menu ul li a:hover {
+    background-color: #6d4c41;
+    color: #ffe0b2;
+}
+
+/* INTRO */
+.intro {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.intro-image {
+    position: relative;
+    width: 100%;
+}
+
+.intro-image img {
+    width: 100%;
+    display: block; /* remove espaços extras */
+}
+
+.intro-image h1,
+.intro-image p {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); /* centraliza horizontalmente */
+    color: #fff;
+    font-family: 'Merriweather', serif;
+    text-align: center;
+    width: 100%;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.7); /* sombra para destacar no fundo */
+}
+
+.intro-image h1 {
+    top: 30%; /* posição vertical */
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.intro-image h1::after {
+    content: "";
+    display: block;
+    width: 40px;          /* largura da linha */
+    height: 8px;          /* espessura da linha */
+    background-color: #fff; /* cor da linha */
+    margin: 15px auto 0;  /* centraliza e dá espaço abaixo do título */
+}
+
+.intro-image p {
+    top: 60%; /* logo abaixo do título */
+    font-size: 20px;
+    padding-top: 20px;
+}
+
+/* SOBRE */
+.sobre {
+    width: 100%;
+    text-align: center;
+    margin: 60px 0;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.sobre h2 {
+    margin: 0 0 32px;
+    font-family: 'Merriweather', serif;
+    font-size: 38px;
+    font-weight: 700;
+    color: #1f1f1f;
+    line-height: 1.2;
+}
+
+.sobre h2::after {
+    content: "";
+    display: block;
+    width: 40px;          
+    height: 3px;          
+    background-color: #6d4c41; 
+    margin: 12px auto 0;
+}
+
+.sobre-container {
+    width: 100%;
+    max-width: 1060px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 5px;
+}
+
+.sobre-item {
+    position: relative;
+    width: 50%;
+    max-width: 575px;
+    overflow: visible;
+}
+
+.sobre-item img {
+    display: block;
+    width: 90%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 0;
+}
+
+.sobre-titulo {
+    position: absolute;
+    left: 0;
+    bottom: -33px;
+    height: 50px;
+    padding: 0 50px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    background-color: #222;
+    color: #fff;
+    font-family: 'Merriweather', serif;
+    font-size: 25px;
+    font-style: italic;
+    font-weight: 700;
+    text-align: left;
+    z-index: 2;
+}
+
+
+.sobre p {
+    width: 40%;
+    max-width: 700px;
+    margin: 100px auto 0;
+    font-family: 'Merriweather', serif;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 1.65;
+    color: #6d4c41;
+    text-align: justify;
+}
+
+/* PRODUTOS */
+.produtos{
+    background-color: #e7e4d8;
+    padding-top: 50px;
+    padding-bottom: 90px;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.produtos-container{
+    padding-left: 250px;
+    padding-right: 250px;
+    display: flex;
+    gap: 60px;
+}
+
+.produtos-item{
+    text-align: center;
+}
+
+.produtos-item p {
+    text-align: left;
+    line-height: 1.2;
+    padding: 25px;
+}
+
+.produtos-paulista::before{
+    content: "";
+    display: block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 10% auto;
+    border: 5px solid white;
+    background: #472903;
+    box-shadow: 0 0 0 5px #472903;
+}
+
+.produtos-carioca::before{
+    content: "";
+    display: block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 10% auto;
+    border: 5px solid white;
+    background: #c06a3c;
+    box-shadow: 0 0 0 5px #c06a3c;
+}
+
+.produtos-mineiro::before{
+    content: "";
+    display: block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 10% auto;
+    border: 5px solid white;
+    background: #e0a838;
+    box-shadow: 0 0 0 5px #e0a838;
+}
+ 
+.produtos-btn {
+    margin-top: 25px;
+    align-items: center;
+    text-align: center;
+    padding: 14px 28px;
+    border: 2px solid #6d4c41;
+    color: #472903;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    transition:
+    color 0.3s ease-in-out,
+    background-color 0.3s ease-in-out,
+    box-shadow 0.3s ease-in-out;
+}
+
+.produtos-btn:hover {
+  background-color: #6d4c41;
+  box-shadow: 0 0 10px 1px #6d4c41;
+  color: #fff;
+}
+
+/* LOCALIZAÇÃO */
+.locais {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.locais-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.locais-item > div {
+  display: flex;
+  flex-direction: column;
+  gap: 05px;
+  max-width: 285px;
+}
+
+.locais-item > div > h2{
+    font-size: xx-large;
+}
+
+.locais-item > div > p{
+    width: 250px;
+}
+
+.locais-item > div > a {
+  text-align: center;
+  padding: 14px 14px;
+  margin-top: 5px;
+  border: 2px solid #555454;
+  color: #555454;
+  max-width: 200px;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition:
+    color 0.3s ease-in-out,
+    background-color 0.3s ease-in-out,
+    box-shadow 0.3s ease-in-out;
+}
+
+.locais-item > div > a:hover {
+  background-color: #555454;
+  box-shadow: 0 0 10px 1px #555454;
+  color: #fff;
+}
+
+/* NOVIDADES */
+.assine {
+    margin: 0;
+    margin-top: 50px;
+    background-color: #e7e4d8;
+    box-sizing: border-box;
+}
+
+.assine-container {
+    width: 95%;
+    margin: 100px auto 0;
+    padding: 20px 0 24px;
+    max-width: 650px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    text-align: left;
+}
+
+.assine-info {
+    flex: 1;
+}
+
+.assine-info h2 {
+    margin: 0;
+    font-size: 25px;
+    line-height: 1.15;
+}
+
+.assine-info p {
+    margin: 4px 0 0;
+    font-size: 15px;
+    font-style: italic;
+}
+
+.assine form {
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+}
+
+.assine form label {
+    display: none;
+}
+
+.assine form input {
+    width: 100%;
+    height: 36px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    border: 2px solid #292929;
+    background-color: #e7e4d8;
+    font-family: 'Merriweather', serif;
+    font-size: 15px;
+    font-style: italic;
+}
+
+.assine form button {
+    width: 100%;
+    height: 38px;
+    border: 2px solid #292929;
+    background-color: #292929;
+    color: #fff;
+    font-family: 'Merriweather', serif;
+    font-size: 15px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.footer {
+    margin: 0 auto;
+    background-color: #d8d5cc;
+}
+
+.footer-container {
+    width: 95%;
+    max-width: 650px;
+    min-height: 90px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.footer-container p {
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+.footer-logo {
+    width: 100px;
+    height: auto;
+}
+
+@media (max-width: 900px) {
+
+    .sidebar-menu {
+        height: auto;
+        min-height: 50px;
+        padding: 0 15px;
+        box-sizing: border-box;
+    }
+
+    .sidebar-menu ul {
+        gap: 5px;
+        padding: 10px 0;
+    }
+
+    .sidebar-menu ul li a {
+        font-size: 13px;
+        padding: 5px 7px;
+    }
+
+    .intro-image h1 {
+        top: 25%;
+        font-size: 38px;
+    }
+
+    .intro-image p {
+        top: 55%;
+        font-size: 16px;
+    }
+
+    .sobre-container {
+        gap: 15px;
+    }
+
+    .sobre-item img {
+        width: 100%;
+    }
+
+    .sobre p {
+        width: 70%;
+    }
+
+    .produtos-container {
+        padding-left: 60px;
+        padding-right: 60px;
+        gap: 30px;
+    }
+
+    .produtos-item p {
+        padding: 15px;
+        font-size: 14px;
+    }
+
+    .locais-item {
+        width: 90%;
+    }
+}
+
+@media (max-width: 700px) {
+
+    .sidebar-menu {
+        position: relative;
+        flex-direction: column;
+        padding: 8px 10px;
+    }
+
+    .sidebar-menu img {
+        width: 90px;
+    }
+
+    .sidebar-menu ul {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 5px 0;
+        gap: 3px;
+    }
+
+    .sidebar-menu ul li a {
+        font-size: 12px;
+        padding: 5px 6px;
+    }
+
+    .intro-image h1 {
+        top: 20%;
+        font-size: 28px;
+        line-height: 1.2;
+    }
+
+    .intro-image h1::after {
+        width: 30px;
+        height: 5px;
+        margin-top: 8px;
+    }
+
+    .intro-image p {
+        top: 55%;
+        font-size: 13px;
+        padding-top: 5px;
+    }
+
+    .sobre {
+        margin: 40px 0;
+        padding: 0 15px;
+    }
+
+    .sobre h2 {
+        font-size: 30px;
+    }
+
+    .sobre-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+    }
+
+    .sobre-item {
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .sobre-item img {
+        width: 100%;
+        height: 200px;
+    }
+
+    .sobre-titulo {
+        height: 45px;
+        bottom: -25px;
+        padding: 0 30px;
+        font-size: 20px;
+    }
+
+    .sobre p {
+        width: 90%;
+        margin-top: 80px;
+        font-size: 15px;
+    }
+
+    .produtos {
+        padding: 40px 20px 70px;
+        margin-bottom: 60px;
+    }
+
+    .produtos-container {
+        padding: 0;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+    }
+
+    .produtos-item {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .produtos-item p {
+        width: 220px;
+        margin: 0 auto;
+        padding: 10px 0;
+        font-size: 13px;
+    }
+
+    .produtos-paulista::before,
+    .produtos-carioca::before,
+    .produtos-mineiro::before {
+        width: 90px;
+        height: 90px;
+    }
+
+    .produtos-btn {
+        display: inline-block;
+        margin-top: 35px;
+        font-size: 0.9rem;
+        padding: 12px 20px;
+    }
+
+    .locais {
+        gap: 50px;
+    }
+
+    .locais-item {
+        width: 90%;
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .locais-item img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .locais-item > div {
+        align-items: center;
+    }
+
+    .locais-item > div > h2 {
+        font-size: 28px;
+        margin: 0;
+    }
+
+    .locais-item > div > p {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .locais-item > div > a {
+        width: 200px;
+    }
+
+    .assine {
+        width: calc(100% - 30px);
+        margin-top: 70px;
+        padding: 30px 20px;
+    }
+
+    .assine-container {
+        flex-direction: column;
+        gap: 25px;
+        max-width: 400px;
+    }
+
+    .assine-info {
+        width: 100%;
+        text-align: center;
+    }
+
+    .assine-info h2 {
+        font-size: 22px;
+    }
+
+    .assine-info p {
+        font-size: 14px;
+    }
+
+    .assine form {
+        width: 100%;
+    }
+
+    .footer {
+        width: calc(100% - 30px);
+    }
+
+    .footer-container {
+        min-height: 120px;
+        padding: 20px;
+        box-sizing: border-box;
+        flex-direction: column;
+        justify-content: center;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .footer-container p {
+        font-size: 12px;
+    }
+
+    .footer-logo {
+        width: 90px;
+    }
+}
+
+@media (max-width: 400px) {
+
+    .sidebar-menu ul li a {
+        font-size: 10px;
+        padding: 4px;
+    }
+
+    .intro-image h1 {
+        font-size: 22px;
+    }
+
+    .intro-image p {
+        font-size: 11px;
+    }
+
+    .sobre h2 {
+        font-size: 26px;
+    }
+
+    .sobre-item img {
+        height: 170px;
+    }
+
+    .sobre-titulo {
+        font-size: 18px;
+        padding: 0 22px;
+    }
+
+    .produtos-item h2 {
+        font-size: 28px;
+    }
+
+    .produtos-item p {
+        width: 200px;
+        font-size: 12px;
+    }
+
+    .assine-info h2 {
+        font-size: 20px;
+    }
+}
