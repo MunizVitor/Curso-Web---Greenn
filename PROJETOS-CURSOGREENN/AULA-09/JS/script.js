@@ -1,92 +1,166 @@
-function exibeValores(nomeVariavel, variavel) {
-    console.log(`${nomeVariavel}: `, variavel, typeof variavel)
+console.log("TESTE")
+
+//LAÇO DE REPETIÇÃO FOR
+console.log("Laço de repetição FOR");
+for (let i = 0; i <= 5; i++) {
+    console.log(i);
+}
+console.log("Laço de repetição FOR");
+//LAÇO DE REPETIÇÃO FOR
+
+//LAÇO DE REPETIÇÃO WHILE
+console.log("Laço de repetição WHILE");
+let i = 0;
+while (i <= 5) {
+    console.log(i);
+    //i++ || i + 1
+    i++;
+}
+console.log("Laço de repetição WHILE");
+//LAÇO DE REPETIÇÃO WHILE
+
+//LAÇO DE REPETIÇÃO DO WHILE
+console.log("Laço de repetição DO WHILE");
+i = 0;
+do {
+    console.log(i);
+    i++;
+} while (i <= 5)
+    console.log("Laço de repetição DO WHILE");
+//LAÇO DE REPETIÇÃO DO WHILE
+
+//LAÇO DE REPETIÇÃO FOR IN
+const pessoa = {
+    nome: "Thiago",
+    idade: 28
 }
 
-const nome = "João";
-const idade = 30;
-const estaAtivo = true;
-const autor = null;
+console.log(pessoa)
 
-exibeValores("Nome:", nome);
-exibeValores("Idade:", idade);
-exibeValores("Esta Ativo:", estaAtivo);
-exibeValores("Autor:", autor);
-exibeValores("Decimal:", 12.50)
+for(const key in pessoa){
+    console.log(key, pessoa[key]);
+}
+//LAÇO DE REPETIÇÃO FOR IN
 
-const aluno = {
-    "nome": "Felipe",
-    "idade": 25,
-    "saldo": -2500.32
+//LAÇO DE REPETIÇÃO FOR OF
+const frutas = ["banana", "maça", "uva"]
+for (const element of frutas) {
+    console.log(element);
 }
 
-exibeValores("Aluno: ", aluno);
+const arr = [0, 1, 2, 3];
+for(i = 0; i < arr.length; i++){
+    console.log(arr[i]);
+}
 
-aluno.nome = "Felipe Silva";
-aluno.idade = 26;
-aluno.estaAtivo = true;
+for (const element of arr) {
+    console.log(element);
+}
+//LAÇO DE REPETIÇÃO FOR OF
 
-exibeValores("Aluno: ", aluno);
-exibeValores("Aluno: ", aluno);
+//BREAK
+for(let index = 0; index <= 10; index++){
+    if(index === 5){
+        console.log("Index é igual a 5 então pare!!!")
+        break;
+    }
+    console.log(index);
+}
 
-console.log(Math.abs(aluno.saldo));
-console.log(Math.round(aluno.saldo));
-console.log(Math.ceil(aluno.saldo));
+for(let numero = 0; numero <= 10; numero++){
+    if(numero % 2 == 0){
+        console.log("É um número par")
+        continue;
+    }
+    console.log(numero);
+}
+//BREAK
 
-aluno.saldo = Math.abs(aluno.saldo);
-console.log(aluno.saldo);
+//LAÇO DE REPETIÇÃO IF
+let idade = 25
+if(idade <= 30){
+    console.log("Idade e menor do que trinta");
+}
 
-const date = new Date();
+idade = 30
 
-console.log(date.getDate());//Aqui ele traz o dia do mês, ou seja, de 1 a 31
-console.log(date.getDay());//Neste caso ele apenas traz o INDICE da semana, sendo 0 = Domingo, 1 = Segunda, 2 = Terça, 3 = Quarta, 4 = Quinta, 5 = Sexta e 6 = Sábado
+if(idade <= 29){
+    console.log("Idade e maior do que vinte e nove");
+}
+//LAÇO DE REPETIÇÃO IF
 
-const numeros = [5, 10, 15, 20];
-const frutas = ["banana", "maça", "laranja", "uva"];
+//LAÇO DE REPETIÇÃO IF-ELSE
+let nota = window.prompt("Digite sua nota: ");
 
-console.log(numeros);
-console.log(numeros.sort());
+if(nota > 6){
+    console.log("Aluno Aprovado");
+    window.alert("Aluno em Recuperação");
+} else if(nota < 5){
+    console.log("Aluno em Recuperação");
+    window.alert("Aluno em Recuperação");
+} else {
+    console.log("Aluno Reprovado");
+    window.alert("Aluno Reprovado");
+}
+//LAÇO DE REPETIÇÃO IF-ELSE
 
-console.log(frutas.find("banana"));
-console.log(frutas.find((item) => item === "banana"));
+//LAÇO DE REPETIÇÃO DE SWITCH
+let diaSemana = "Segunda-Feira"
 
-console.log(frutas.find((item) => {
-   return item === "uva";
-}));
+switch(diaSemana){
+    case "Segunda-Feira":
+        console.log("Dia útil - Segunda-Feira");
+    break;
+    case"Terça-Feira":
+        console.log("Dia útil - Terça-Feira");
+    break;
+        case"Quarta-Feira":
+        console.log("Dia útil - Quarta-Feira");
+    break;
+        case"Quinta-Feira":
+        console.log("Dia útil - Quinta-Feira");
+    break;
+        case"Sexta-Feira":
+        console.log("Dia útil - Sexta-Feira");
+    break;
+    default:
+        "Fim de Semana"
+    break
+}
+//LAÇO DE REPETIÇÃO DO SWITCH
 
+//Operadores Lógicos
+function acessoLiberado() {
+    console.log("Acesso Liberado");
+}
 
-console.log(aluno);
-console.log(JSON.stringify(aluno));
+function acessoNegado() {
+    console.log("Acesso Negado");
+}
 
-let num1 = 25;
-let num2 = 10;
+function liberarAcesso(pessoaEvento){
 
-console.log(num1 == num2);
-console.log(num1 === num2);
-console.log(num1 != num2);
-console.log(num1 + num2);
-console.log(num1 - num2);
+    if (pessoaEvento.possuiAcesso || (pessoaEvento.idade >= 18 && pessoaEvento.possuiIngresso && pessoaEvento.possuiDocumento)){
+        acessoLiberado();
+    } else {
+        acessoNegado();
+    }
+}
 
-const estoque = new Map();
+const pessoaEvento = {
+    nome: "Bob",
+    idade: 20,
+    possuiDocumento: true,
+    possuiIngresso: true,
+    possuiAcesso: true
+}
 
-estoque.set("maçã", 10);
-estoque.set("banana", 5);
-estoque.set("laranja", 8);
-console.log(estoque);
+console.log(pessoa);
+liberarAcesso(pessoa)
 
-console.log(estoque.get("maçã"));
-console.log(estoque.has("laranja"));
+pessoa.idade = 16;
+pessoa.possuiAcesso = !pessoaEvento.possuiAcesso
 
-const nomes = ["Anabele", "Ana-Flavia", "Bruna", "Carla", "Daniela", "Fernanda", "Juliana", "Larissa", "Letícia", "Mariana", "Patrícia", "Patrícia", "Priscila", "Rafaela"];
-console.log(nomes);
+console.log(pessoa);
+liberarAcesso(pessoa);
 
-const unicos = [...new Set(nomes)]; // speed
-console.log(unicos);
-
-
-const notas = [9, 4, 7, 6];
-console.log(notas);
-console.log(
-    notas.filter((nota) => nota >= 6)
-);
-
-console.log(notas.reduce((acumulador, nota) => acumulador + nota, 0));
